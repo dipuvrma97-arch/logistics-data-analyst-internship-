@@ -1,0 +1,43 @@
+=== QuickShip KPI demo (10 sample orders) ===
+On-Time Delivery Rate : 60.0 %
+Average Delivery Time : 2.64 days
+Cost per Kilometre    : Rs 2.67 / km
+
+Average delay by warehouse (days; + means late):
+warehouse
+Chennai   -0.05
+Delhi     -0.20
+Kolkata    0.57
+Mumbai    -0.30
+Name: delay_days, dtype: float64
+
+=== Roadmap pseudocode ===
+
+# STEP 1 - DATA COLLECTION
+orders = load_data("quickship_raw.csv")            # public dataset / simulated
+
+# STEP 2 - DATA CLEANING
+remove duplicate rows
+fix text formats (e.g. 'delhi ' -> 'Delhi')
+fill missing weight with median of package type
+remove invalid values (distance <= 0, delivery_days > 30)
+remove extreme outliers using IQR rule (per vehicle type)
+scale numeric columns with min-max normalization
+
+# STEP 3 - EXPLORATORY DATA ANALYSIS (EDA)
+calculate mean, median, std, correlation
+plot histogram, boxplot, scatter, bar, line, heatmap
+find bottlenecks (warehouse / vehicle / season)
+
+# STEP 4 - PREDICTIVE MODELING
+X = [distance, weight, vehicle, warehouse, package_type, month]
+y = delivery_days
+split data into train (80%) and test (20%)
+train LinearRegression, DecisionTree, RandomForest
+evaluate with RMSE, MAE, R-squared, 5-fold cross-validation
+tune best model with GridSearchCV
+
+# STEP 5 - OPTIMIZATION AND DECISIONS
+what-if analysis: predicted delivery time if bottleneck is reduced
+recommend vehicle allocation and warehouse capacity changes
+
