@@ -1,0 +1,13 @@
+Clean shape: (964, 17)
+Missing values left: 0
+Duplicate rows left: 0
+Warehouse names: ['Chennai', 'Delhi', 'Kolkata', 'Mumbai']
+ order_id warehouse vehicle  distance_km  weight_kg  delivery_days  shipping_cost  delay_days  is_late  cost_per_km
+        1   Kolkata     Van          186       20.6            2.7          636.0         0.7        1         3.42
+        2   Chennai    Bike           40       25.5            3.1          421.0         1.1        1        10.52
+        3   Chennai   Truck          568        5.2            3.0         1509.0         0.0        0         2.66
+        4    Mumbai   Truck          617       23.3            2.7         1652.0        -1.3        0         2.68
+        5    Mumbai   Truck          697        7.9            2.8         1812.0        -1.2        0         2.60
+     distance_km_norm  weight_kg_norm  shipping_cost_norm
+min               0.0             0.0                 0.0
+max               1.0             1.0                 1.0

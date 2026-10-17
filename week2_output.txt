@@ -1,0 +1,66 @@
+Raw shape: (1012, 10)
+
+Missing values:
+ order_id          0
+order_date        0
+warehouse         0
+vehicle           0
+package_type      0
+distance_km       0
+weight_kg        50
+promised_days     0
+delivery_days    20
+shipping_cost     0
+dtype: int64
+
+Duplicate rows: 12
+
+Warehouse names (raw): [' Chennai ', ' Delhi ', ' Kolkata ', ' Mumbai ', 'CHENNAI', 'Chennai', 'DELHI', 'Delhi', 'KOLKATA', 'Kolkata', 'MUMBAI', 'Mumbai', 'chennai', 'delhi', 'mumbai']
+
+=== CLEANING SUMMARY ===
+{
+  "raw_rows": 1012,
+  "raw_cols": 10,
+  "missing_before": {
+    "weight_kg": 50,
+    "delivery_days": 20
+  },
+  "duplicates_before": 12,
+  "warehouse_raw_unique": 15,
+  "invalid_distance": 3,
+  "delivery_days_over_30": 4,
+  "warehouse_rows_fixed": 40,
+  "warehouse_clean_unique": 4,
+  "duplicates_removed": 12,
+  "invalid_distance_removed": 3,
+  "missing_days_removed": 20,
+  "days_typo_removed": 4,
+  "weight_missing_filled": 50,
+  "cost_outliers_removed": 9,
+  "max_cost_before": 15416.0,
+  "mean_cost_before": 1281.8,
+  "max_cost_after": 2378.0,
+  "mean_cost_after": 1226.0,
+  "cost_per_km_before": 2.83,
+  "cost_per_km_after": 2.7,
+  "clean_rows": 964,
+  "rows_removed_total": 48,
+  "missing_after": 0,
+  "duplicates_after": 0,
+  "norm_min_max_check": {
+    "distance_km_norm": [
+      0.0,
+      1.0
+    ],
+    "weight_kg_norm": [
+      0.0,
+      1.0
+    ],
+    "shipping_cost_norm": [
+      0.0,
+      1.0
+    ]
+  }
+}
+
+Clean data saved to data/quickship_clean.csv  shape: (964, 17)
