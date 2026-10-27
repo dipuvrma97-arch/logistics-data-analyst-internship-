@@ -1,0 +1,41 @@
+=== Central tendency ===
+                   mean  median     std   min     max  skew
+distance_km     453.68   462.5  252.06  10.0   898.0  0.01
+weight_kg        11.91    10.5    8.23   0.5    62.8  1.54
+delivery_days     2.37     2.4    0.84   0.5     5.1  0.10
+shipping_cost  1226.01  1261.0  594.97  30.0  2378.0 -0.06
+
+=== Correlation ===
+                distance_km  weight_kg  delivery_days  shipping_cost
+distance_km          1.000     -0.002          0.660          0.990
+weight_kg           -0.002      1.000          0.140          0.084
+delivery_days        0.660      0.140          1.000          0.662
+shipping_cost        0.990      0.084          0.662          1.000
+
+On-time rate:  82.5 %
+Average delivery days: 2.37
+
+=== by_warehouse ===
+   warehouse  orders  avg_delivery_days  avg_delay_days  on_time_pct  avg_cost
+0   Chennai     208               2.30           -0.68        89.42   1214.97
+1     Delhi     285               2.13           -0.92        91.93   1269.80
+2   Kolkata     178               3.06            0.13        44.94   1183.73
+3    Mumbai     293               2.24           -0.76        91.13   1216.96
+
+=== by_vehicle ===
+   vehicle  orders  avg_delivery_days  avg_delay_days  on_time_pct  avg_cost
+0    Bike      35               1.49           -0.51        74.29    194.74
+1   Truck     648               2.65           -0.77        88.58   1551.73
+2     Van     281               1.84           -0.30        69.40    603.35
+
+=== by_package ===
+   package_type  orders  ...  on_time_pct  avg_cost
+0     Clothing     278  ...        84.53   1228.70
+1    Documents     137  ...        86.86   1204.92
+2  Electronics     251  ...        84.86   1230.19
+3    Furniture     146  ...        65.75   1200.40
+4      Grocery     152  ...        86.84   1257.83
+
+[5 rows x 6 columns]
+
+Saved 6 charts in week3/charts/ and eda_summary.json

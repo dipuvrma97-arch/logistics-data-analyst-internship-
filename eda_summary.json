@@ -1,0 +1,270 @@
+{
+  "central_tendency": [
+    {
+      "variable": "distance_km",
+      "mean": 453.68,
+      "median": 462.5,
+      "std": 252.06,
+      "min": 10.0,
+      "max": 898.0,
+      "skew": 0.01
+    },
+    {
+      "variable": "weight_kg",
+      "mean": 11.91,
+      "median": 10.5,
+      "std": 8.23,
+      "min": 0.5,
+      "max": 62.8,
+      "skew": 1.54
+    },
+    {
+      "variable": "delivery_days",
+      "mean": 2.37,
+      "median": 2.4,
+      "std": 0.84,
+      "min": 0.5,
+      "max": 5.1,
+      "skew": 0.1
+    },
+    {
+      "variable": "shipping_cost",
+      "mean": 1226.01,
+      "median": 1261.0,
+      "std": 594.97,
+      "min": 30.0,
+      "max": 2378.0,
+      "skew": -0.06
+    }
+  ],
+  "correlation": {
+    "distance_km": {
+      "distance_km": 1.0,
+      "weight_kg": -0.002,
+      "delivery_days": 0.66,
+      "shipping_cost": 0.99
+    },
+    "weight_kg": {
+      "distance_km": -0.002,
+      "weight_kg": 1.0,
+      "delivery_days": 0.14,
+      "shipping_cost": 0.084
+    },
+    "delivery_days": {
+      "distance_km": 0.66,
+      "weight_kg": 0.14,
+      "delivery_days": 1.0,
+      "shipping_cost": 0.662
+    },
+    "shipping_cost": {
+      "distance_km": 0.99,
+      "weight_kg": 0.084,
+      "delivery_days": 0.662,
+      "shipping_cost": 1.0
+    }
+  },
+  "on_time_rate": 82.5,
+  "avg_delivery_days": 2.37,
+  "avg_cost_per_km": 2.7,
+  "rows": 964,
+  "by_warehouse": [
+    {
+      "warehouse": "Chennai",
+      "orders": 208,
+      "avg_delivery_days": 2.3,
+      "avg_delay_days": -0.68,
+      "on_time_pct": 89.42,
+      "avg_cost": 1214.97
+    },
+    {
+      "warehouse": "Delhi",
+      "orders": 285,
+      "avg_delivery_days": 2.13,
+      "avg_delay_days": -0.92,
+      "on_time_pct": 91.93,
+      "avg_cost": 1269.8
+    },
+    {
+      "warehouse": "Kolkata",
+      "orders": 178,
+      "avg_delivery_days": 3.06,
+      "avg_delay_days": 0.13,
+      "on_time_pct": 44.94,
+      "avg_cost": 1183.73
+    },
+    {
+      "warehouse": "Mumbai",
+      "orders": 293,
+      "avg_delivery_days": 2.24,
+      "avg_delay_days": -0.76,
+      "on_time_pct": 91.13,
+      "avg_cost": 1216.96
+    }
+  ],
+  "by_vehicle": [
+    {
+      "vehicle": "Bike",
+      "orders": 35,
+      "avg_delivery_days": 1.49,
+      "avg_delay_days": -0.51,
+      "on_time_pct": 74.29,
+      "avg_cost": 194.74
+    },
+    {
+      "vehicle": "Truck",
+      "orders": 648,
+      "avg_delivery_days": 2.65,
+      "avg_delay_days": -0.77,
+      "on_time_pct": 88.58,
+      "avg_cost": 1551.73
+    },
+    {
+      "vehicle": "Van",
+      "orders": 281,
+      "avg_delivery_days": 1.84,
+      "avg_delay_days": -0.3,
+      "on_time_pct": 69.4,
+      "avg_cost": 603.35
+    }
+  ],
+  "by_package": [
+    {
+      "package_type": "Clothing",
+      "orders": 278,
+      "avg_delivery_days": 2.29,
+      "avg_delay_days": -0.7,
+      "on_time_pct": 84.53,
+      "avg_cost": 1228.7
+    },
+    {
+      "package_type": "Documents",
+      "orders": 137,
+      "avg_delivery_days": 2.28,
+      "avg_delay_days": -0.72,
+      "on_time_pct": 86.86,
+      "avg_cost": 1204.92
+    },
+    {
+      "package_type": "Electronics",
+      "orders": 251,
+      "avg_delivery_days": 2.33,
+      "avg_delay_days": -0.66,
+      "on_time_pct": 84.86,
+      "avg_cost": 1230.19
+    },
+    {
+      "package_type": "Furniture",
+      "orders": 146,
+      "avg_delivery_days": 2.79,
+      "avg_delay_days": -0.18,
+      "on_time_pct": 65.75,
+      "avg_cost": 1200.4
+    },
+    {
+      "package_type": "Grocery",
+      "orders": 152,
+      "avg_delivery_days": 2.27,
+      "avg_delay_days": -0.78,
+      "on_time_pct": 86.84,
+      "avg_cost": 1257.83
+    }
+  ],
+  "by_month": [
+    {
+      "month": 1,
+      "orders": 70,
+      "avg_delivery_days": 2.29,
+      "avg_delay_days": -0.74,
+      "on_time_pct": 87.14,
+      "avg_cost": 1236.61
+    },
+    {
+      "month": 2,
+      "orders": 102,
+      "avg_delivery_days": 2.3,
+      "avg_delay_days": -0.77,
+      "on_time_pct": 88.24,
+      "avg_cost": 1304.3
+    },
+    {
+      "month": 3,
+      "orders": 70,
+      "avg_delivery_days": 2.13,
+      "avg_delay_days": -0.73,
+      "on_time_pct": 90.0,
+      "avg_cost": 1084.83
+    },
+    {
+      "month": 4,
+      "orders": 79,
+      "avg_delivery_days": 2.29,
+      "avg_delay_days": -0.73,
+      "on_time_pct": 89.87,
+      "avg_cost": 1250.14
+    },
+    {
+      "month": 5,
+      "orders": 58,
+      "avg_delivery_days": 2.22,
+      "avg_delay_days": -0.73,
+      "on_time_pct": 87.93,
+      "avg_cost": 1174.5
+    },
+    {
+      "month": 6,
+      "orders": 87,
+      "avg_delivery_days": 2.41,
+      "avg_delay_days": -0.74,
+      "on_time_pct": 80.46,
+      "avg_cost": 1330.94
+    },
+    {
+      "month": 7,
+      "orders": 87,
+      "avg_delivery_days": 2.19,
+      "avg_delay_days": -0.69,
+      "on_time_pct": 86.21,
+      "avg_cost": 1152.46
+    },
+    {
+      "month": 8,
+      "orders": 85,
+      "avg_delivery_days": 2.16,
+      "avg_delay_days": -0.86,
+      "on_time_pct": 90.59,
+      "avg_cost": 1219.59
+    },
+    {
+      "month": 9,
+      "orders": 78,
+      "avg_delivery_days": 2.17,
+      "avg_delay_days": -0.65,
+      "on_time_pct": 84.62,
+      "avg_cost": 1146.41
+    },
+    {
+      "month": 10,
+      "orders": 93,
+      "avg_delivery_days": 2.92,
+      "avg_delay_days": -0.11,
+      "on_time_pct": 60.22,
+      "avg_cost": 1252.22
+    },
+    {
+      "month": 11,
+      "orders": 64,
+      "avg_delivery_days": 2.95,
+      "avg_delay_days": -0.13,
+      "on_time_pct": 62.5,
+      "avg_cost": 1256.23
+    },
+    {
+      "month": 12,
+      "orders": 91,
+      "avg_delivery_days": 2.43,
+      "avg_delay_days": -0.6,
+      "on_time_pct": 82.42,
+      "avg_cost": 1246.81
+    }
+  ]
+}
