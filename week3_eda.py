@@ -1,7 +1,7 @@
 """
 Week 3 - Advanced Data Analysis and Visualization in Logistics
 Input : data/quickship_clean.csv   (made by week2/week2_cleaning.py)
-Output: week3/charts/*.png (6 charts), week3/eda_summary.json
+Output: week3/charts/*.png (8 charts), week3/eda_summary.json
 
 Run:  python week3/week3_eda.py
 """
@@ -144,6 +144,38 @@ plt.tight_layout()
 plt.savefig(CHARTS / "06_correlation_heatmap.png", dpi=150)
 plt.close()
 
+# Chart 7: Bar - cost per km by vehicle type (cost driver)
+veh_cost = (df.groupby("vehicle")["shipping_cost"].sum() / df.groupby("vehicle")["distance_km"].sum()).round(2)
+veh_cost = veh_cost.reindex(["Bike", "Van", "Truck"])
+summary["cost_per_km_by_vehicle"] = veh_cost.to_dict()
+plt.figure(figsize=(7, 4.5))
+ax = sns.barplot(x=veh_cost.index, y=veh_cost.values, hue=veh_cost.index, palette="Set2", legend=False)
+for i, v in enumerate(veh_cost.values):
+    ax.text(i, v + 0.1, f"Rs {v:.2f}", ha="center")
+plt.title("Chart 7: Cost per km by vehicle type")
+plt.xlabel("Vehicle type")
+plt.ylabel("Cost per km (Rs)")
+plt.tight_layout()
+plt.savefig(CHARTS / "07_cost_per_km_by_vehicle_bar.png", dpi=150)
+plt.close()
+
+# Chart 8: Bar - on-time delivery % by package type
+pk = pd.DataFrame(summary["by_package"]).sort_values("on_time_pct")
+plt.figure(figsize=(7.5, 4.5))
+ax = sns.barplot(data=pk, x="package_type", y="on_time_pct", hue="package_type",
+                 palette="mako", legend=False)
+for i, v in enumerate(pk["on_time_pct"]):
+    ax.text(i, v + 1, f"{v:.1f}%", ha="center")
+plt.axhline(90, color="red", linestyle="--", label="Target = 90%")
+plt.ylim(0, 105)
+plt.title("Chart 8: On-time delivery rate by package type")
+plt.xlabel("Package type")
+plt.ylabel("On-time deliveries (%)")
+plt.legend()
+plt.tight_layout()
+plt.savefig(CHARTS / "08_ontime_by_package_bar.png", dpi=150)
+plt.close()
+
 with open(ROOT / "week3" / "eda_summary.json", "w") as f:
     json.dump(summary, f, indent=2)
-print("\nSaved 6 charts in week3/charts/ and eda_summary.json")
+print("\nSaved 8 charts in week3/charts/ and eda_summary.json")

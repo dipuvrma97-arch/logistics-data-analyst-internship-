@@ -266,5 +266,10 @@
       "on_time_pct": 82.42,
       "avg_cost": 1246.81
     }
-  ]
+  ],
+  "cost_per_km_by_vehicle": {
+    "Bike": 5.95,
+    "Van": 3.07,
+    "Truck": 2.64
+  }
 }

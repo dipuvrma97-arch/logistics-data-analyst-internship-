@@ -38,4 +38,4 @@ Average delivery days: 2.37
 
 [5 rows x 6 columns]
 
-Saved 6 charts in week3/charts/ and eda_summary.json
+Saved 8 charts in week3/charts/ and eda_summary.json
