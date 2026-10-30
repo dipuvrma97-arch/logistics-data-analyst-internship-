@@ -1,0 +1,31 @@
+=== Model results on test data ===
+                      model  RMSE   MAE    R2  CV_R2_mean CV_R2_std
+          Linear Regression 0.421 0.336 0.778       0.748     0.031
+Decision Tree (max_depth=5) 0.514 0.416 0.669       0.626     0.051
+    Random Forest (default) 0.489 0.393 0.700       0.674      0.04
+      Random Forest (tuned) 0.487 0.390 0.703       0.694         -
+
+Best parameters (Random Forest): {'max_depth': 5, 'min_samples_leaf': 1, 'n_estimators': 200}
+
+=== Top factors (Random Forest importance) ===
+distance_km                 0.597
+warehouse_Kolkata           0.234
+is_festive                  0.076
+package_type_Furniture      0.041
+weight_kg                   0.037
+package_type_Electronics    0.004
+warehouse_Delhi             0.003
+package_type_Grocery        0.002
+
+=== What-if scenarios (predicted, all orders) ===
+                scenario  avg_days  avg_saved  ontime_pct
+       Current situation      2.37       0.00        85.4
+   A: Kolkata like Delhi      2.18       0.19        95.1
+B: festival rush managed      2.27       0.10        89.4
+         C: both A and B      2.09       0.28        98.7
+
+=== Example predictions for new orders ===
+  order  distance_km  weight_kg  month vehicle warehouse package_type  promised_days  predicted_days
+Order A          300         10      6     Van     Delhi     Clothing              2            1.63
+Order B          300         10     11     Van   Kolkata    Furniture              2            3.73
+Order C          700         20      3   Truck    Mumbai  Electronics              4            2.75

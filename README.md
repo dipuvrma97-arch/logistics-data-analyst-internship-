@@ -29,4 +29,4 @@ Run the files in this order. Everything also works in Google Colab (paste each f
 - Overall on-time delivery rate is 82.5% against a 90% target.
 - Distance is the main driver of both delivery time and cost.
 - The Kolkata warehouse is the biggest bottleneck; October-November (festive season) is the seasonal peak.
-- Linear Regression predicted delivery time best (R2 about 0.70, MAE about 0.39 days).
+- Linear Regression predicted delivery time best (R2 about 0.78, MAE about 0.34 days).

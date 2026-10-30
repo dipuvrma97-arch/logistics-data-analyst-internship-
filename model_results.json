@@ -1,0 +1,162 @@
+{
+  "train_rows": 771,
+  "test_rows": 193,
+  "n_features": 15,
+  "model_table": [
+    {
+      "model": "Linear Regression",
+      "RMSE": 0.421,
+      "MAE": 0.336,
+      "R2": 0.778,
+      "CV_R2_mean": 0.748,
+      "CV_R2_std": 0.031
+    },
+    {
+      "model": "Decision Tree (max_depth=5)",
+      "RMSE": 0.514,
+      "MAE": 0.416,
+      "R2": 0.669,
+      "CV_R2_mean": 0.626,
+      "CV_R2_std": 0.051
+    },
+    {
+      "model": "Random Forest (default)",
+      "RMSE": 0.489,
+      "MAE": 0.393,
+      "R2": 0.7,
+      "CV_R2_mean": 0.674,
+      "CV_R2_std": 0.04
+    },
+    {
+      "model": "Random Forest (tuned)",
+      "RMSE": 0.487,
+      "MAE": 0.39,
+      "R2": 0.703,
+      "CV_R2_mean": 0.694,
+      "CV_R2_std": null
+    }
+  ],
+  "best_params": {
+    "max_depth": 5,
+    "min_samples_leaf": 1,
+    "n_estimators": 200
+  },
+  "linear_coefs": {
+    "distance_km": 0.002,
+    "weight_kg": 0.014,
+    "is_festive": 0.601,
+    "vehicle_Bike": 0.034,
+    "vehicle_Truck": -0.104,
+    "vehicle_Van": 0.07,
+    "warehouse_Chennai": -0.139,
+    "warehouse_Delhi": -0.345,
+    "warehouse_Kolkata": 0.666,
+    "warehouse_Mumbai": -0.181,
+    "package_type_Clothing": -0.091,
+    "package_type_Documents": -0.088,
+    "package_type_Electronics": -0.102,
+    "package_type_Furniture": 0.394,
+    "package_type_Grocery": -0.113
+  },
+  "linear_distance_per_100km": 0.25,
+  "linear_weight_per_10kg": 0.14,
+  "feature_importance_top8": {
+    "distance_km": 0.597,
+    "warehouse_Kolkata": 0.234,
+    "is_festive": 0.076,
+    "package_type_Furniture": 0.041,
+    "weight_kg": 0.037,
+    "package_type_Electronics": 0.004,
+    "warehouse_Delhi": 0.003,
+    "package_type_Grocery": 0.002
+  },
+  "scenarios": [
+    {
+      "scenario": "Current situation",
+      "avg_days": 2.37,
+      "avg_saved": 0.0,
+      "ontime_pct": 85.4
+    },
+    {
+      "scenario": "A: Kolkata like Delhi",
+      "avg_days": 2.18,
+      "avg_saved": 0.19,
+      "ontime_pct": 95.1
+    },
+    {
+      "scenario": "B: festival rush managed",
+      "avg_days": 2.27,
+      "avg_saved": 0.1,
+      "ontime_pct": 89.4
+    },
+    {
+      "scenario": "C: both A and B",
+      "avg_days": 2.09,
+      "avg_saved": 0.28,
+      "ontime_pct": 98.7
+    }
+  ],
+  "scenario_kolkata_saved": 1.01,
+  "scenario_festive_saved": 0.6,
+  "kolkata_orders_all": 178,
+  "festive_orders_all": 157,
+  "example_predictions": [
+    {
+      "order": "Order A",
+      "distance_km": 300,
+      "weight_kg": 10,
+      "month": 6,
+      "vehicle": "Van",
+      "warehouse": "Delhi",
+      "package_type": "Clothing",
+      "promised_days": 2,
+      "predicted_days": 1.63
+    },
+    {
+      "order": "Order B",
+      "distance_km": 300,
+      "weight_kg": 10,
+      "month": 11,
+      "vehicle": "Van",
+      "warehouse": "Kolkata",
+      "package_type": "Furniture",
+      "promised_days": 2,
+      "predicted_days": 3.73
+    },
+    {
+      "order": "Order C",
+      "distance_km": 700,
+      "weight_kg": 20,
+      "month": 3,
+      "vehicle": "Truck",
+      "warehouse": "Mumbai",
+      "package_type": "Electronics",
+      "promised_days": 4,
+      "predicted_days": 2.75
+    }
+  ],
+  "vehicle_summary": [
+    {
+      "vehicle": "Bike",
+      "orders": 35,
+      "cost_per_km": 5.95,
+      "on_time_pct": 74.29
+    },
+    {
+      "vehicle": "Truck",
+      "orders": 648,
+      "cost_per_km": 2.64,
+      "on_time_pct": 88.58
+    },
+    {
+      "vehicle": "Van",
+      "orders": 281,
+      "cost_per_km": 3.07,
+      "on_time_pct": 69.4
+    }
+  ],
+  "festive_avg_days": 2.93,
+  "normal_avg_days": 2.26,
+  "festive_ontime_pct": 61.1,
+  "normal_ontime_pct": 86.6
+}
